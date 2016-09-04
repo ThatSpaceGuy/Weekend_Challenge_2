@@ -3,6 +3,8 @@ console.log('scripts.js sourced!');
 var piCohort = [];
 var numPies;  // This will hold the number of students in the array.
 var currentPi = 0; // This holds the index of the student currently displayed.
+var intervalMark; // This will serve as the container for the interval.
+var elapsedSec = 0; // Counter for the interval timer.
 
 /// == Function Declarations == ///
 function addIndieButton(index, memberName){
@@ -24,6 +26,8 @@ function displayPi(fadeEffect){
   } else {
     changeInfo();
   }
+
+  elapsedSec = 0; //Reset the timer for the automatic advance
 }
 
 function displayNext(){
@@ -56,6 +60,16 @@ function displayThis(){
   displayPi(true);
 }
 
+function autoAdvance(){
+
+  elapsedSec++;
+  console.log('elapsed seconds:', elapsedSec);
+
+  if (elapsedSec === 10){
+    displayNext();
+  }
+}
+
 /// == JavaScript == ///
 $(document).ready(function(){
   console.log('Document ready!');
@@ -78,6 +92,8 @@ $(document).ready(function(){
       for (var i = 0; i < numPies; i++) {
         addIndieButton(i,piCohort[i].first_name);
       }
+
+      intervalMark = setInterval(autoAdvance,1000);
     },
     statusCode: {
       404: function(){
