@@ -58,8 +58,9 @@ Pro Mode
 * 4.0 - The timer should transition between people every 10 seconds.
 Extra Mode
 ----------
-* 4.1 - Get images for everyone.
+* 4.1 - Get images for everyone and add them to the array.
 * 4.2 - Have them display with the json data.
 * 4.3 - Randomize which person is shown first.
 * 4.4 - Add a Random button to jump around the cohort with
+* 4.5 - Highlight the button of the student currently being viewed
 * 5.0 - Tweak the Bootstap for optimization of responsiveness
