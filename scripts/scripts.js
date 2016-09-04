@@ -1,6 +1,6 @@
 console.log('scripts.js sourced!');
 /// == Global Variable Declarations == ///
-
+studentArray = [];
 
 /// == Function Declarations == ///
 
@@ -19,6 +19,9 @@ $(document).ready(function(){
     success: function(data){
       console.log('in Ajax success, with data:', data);
 
+      studentArray = data.students;
+
+      console.log(studentArray);
     },
     statusCode: {
       404: function(){
