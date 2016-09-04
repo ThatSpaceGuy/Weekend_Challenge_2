@@ -70,6 +70,14 @@ function autoAdvance(){
   }
 }
 
+function displayRandom(){
+
+  currentPi = Math.floor(Math.random()*numPies);
+  console.log(currentPi);
+
+  displayPi(true);
+}
+
 /// == JavaScript == ///
 $(document).ready(function(){
   console.log('Document ready!');
@@ -108,4 +116,6 @@ $(document).ready(function(){
   $('#prevButton').click(displayPrev);
 
   $('body').on('click','.indieNav',displayThis);
+
+  $('#randomButton').click(displayRandom);
 }); // end document ready
