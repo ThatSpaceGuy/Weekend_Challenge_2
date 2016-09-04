@@ -18,3 +18,11 @@ body {
 #titleRow {
 	text-decoration: underline;
 }
+
+#infoRow {
+	margin-bottom: 20px;
+}
+
+#navBar {
+	margin-top: 30px;
+}
