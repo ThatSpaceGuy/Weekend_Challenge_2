@@ -10,14 +10,14 @@ console.log('scripts.js sourced!');
 $(document).ready(function(){
   console.log('Document ready!');
 
-  var genericUrl = 'http://www.'+'';
+  var devUrl = 'http://devjana.net/pi/pi_students.json';
 
   //ajax call
   $.ajax({
-    url: genericUrl,
+    url: devUrl,
     dataType: 'JSON',
     success: function(data){
-      console.log('in Ajax success, with data:', data.xxxx);
+      console.log('in Ajax success, with data:', data);
 
     },
     statusCode: {
