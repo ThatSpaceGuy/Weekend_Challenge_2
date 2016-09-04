@@ -9,3 +9,12 @@
 body {
 	text-align: center;
 }
+
+#mainDisplay {
+	margin-top: 30px;
+	border: 1px solid black;
+}
+
+#titleRow {
+	text-decoration: underline;
+}

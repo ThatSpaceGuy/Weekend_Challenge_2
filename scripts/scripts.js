@@ -1,9 +1,17 @@
 console.log('scripts.js sourced!');
 /// == Global Variable Declarations == ///
-studentArray = [];
+var piCohort = [];
+var numPies;  // This will hold the number of students in the array.
 
 /// == Function Declarations == ///
 
+function displayPi(){
+  var thisPi = 0;
+  var piOnDisplay = piCohort[thisPi];
+  $('#titleRow').html('<h3>'+'Pi Student #'+(thisPi+1)+'</h3>');
+  $('#nameRow').html('<h3>'+piOnDisplay.first_name+' '+piOnDisplay.last_name+'</h3>');
+  $('#infoRow').html('<h4>'+piOnDisplay.info+'</h4>');
+}
 
 /// == JavaScript == ///
 
@@ -19,9 +27,12 @@ $(document).ready(function(){
     success: function(data){
       console.log('in Ajax success, with data:', data);
 
-      studentArray = data.students;
+      piCohort = data.students;
+      numPies = piCohort.length;
 
-      console.log(studentArray);
+      console.log(numPies, piCohort);
+
+      displayPi();
     },
     statusCode: {
       404: function(){

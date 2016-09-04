@@ -60,4 +60,6 @@ Extra Mode
 ----------
 * 4.1 - Get images for everyone.
 * 4.2 - Have them display with the json data.
+* 4.3 - Randomize which person is shown first.
+* 4.4 - Add a Random button to jump around the cohort with
 * 5.0 - Tweak the Bootstap for optimization of responsiveness
