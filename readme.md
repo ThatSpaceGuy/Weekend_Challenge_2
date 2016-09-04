@@ -63,4 +63,5 @@ Extra Mode
 * 4.3 - Randomize which person is shown first.
 * 4.4 - Add a Random button to jump around the cohort with
 * 4.5 - Highlight the button of the student currently being viewed
+* 4.6 - Alphabetize the Indie Buttons
 * 5.0 - Tweak the Bootstap for optimization of responsiveness
