@@ -59,9 +59,9 @@ Pro Mode
 Extra Mode
 ----------
 * 4.1 - Add a Random button to jump around the cohort with
-* 4.2 - Get images for everyone and add them to the array.
-* 4.3 - Have them display with the json data.
-* 4.4 - Highlight the button of the student currently being viewed
-* 4.5 - Alphabetize the Indie Buttons
-* 4.6 - Disable Timer Button
+* 4.2 - Disable / Enable Timer Button
+* 4.3 - Get images for everyone and add them to the array.
+* 4.4 - Have them display with the json data.
+* 4.5 - Highlight the button of the student currently being viewed
+* 4.6 - Alphabetize the Indie Buttons
 * 5.0 - Tweak the Bootstap for optimization of responsiveness

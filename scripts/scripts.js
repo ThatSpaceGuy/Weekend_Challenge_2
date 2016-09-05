@@ -78,6 +78,23 @@ function displayRandom(){
   displayPi(true);
 }
 
+function changeTimer(){
+  var timerButton = $('#timerButton');
+  var timerOn = !timerButton.hasClass('btn-success');
+
+  timerButton.toggleClass('btn-success');
+  timerButton.toggleClass('btn-danger');
+
+  if (timerOn) {
+    clearInterval(intervalMark); // end the timer
+    timerButton.html('Enable Auto Advance');
+  } else {
+    elapsedSec = 0; // Reset Timer
+    intervalMark = setInterval(autoAdvance,1000); // Start timer
+    timerButton.html('Disable Auto Advance');
+  }
+}
+
 /// == JavaScript == ///
 $(document).ready(function(){
   console.log('Document ready!');
@@ -118,4 +135,6 @@ $(document).ready(function(){
   $('body').on('click','.indieNav',displayThis);
 
   $('#randomButton').click(displayRandom);
+
+  $('#timerButton').click(changeTimer);
 }); // end document ready
