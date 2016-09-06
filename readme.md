@@ -61,7 +61,8 @@ Extra Mode
 * 4.1 - Add a Random button to jump around the cohort with
 * 4.2 - Disable / Enable Timer Button
 * 4.3 - Tweak the Bootstrap for optimization of responsiveness
-* 4.3 - Get images for everyone and add them to the array.
-* 4.4 - Have them display with the json data.
-* 4.5 - Highlight the button of the student currently being viewed
+* 4.4 - Add Nickname view option
+* 4.5 - Get images for everyone and add them to the array.
+* 4.6 - Have them display with the json data.
+* 4.7 - Highlight the button of the student currently being viewed
 * 5.0 - Alphabetize the Indie Buttons

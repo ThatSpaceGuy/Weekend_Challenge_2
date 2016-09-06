@@ -5,6 +5,7 @@ var numPies;  // This will hold the number of students in the array.
 var currentPi = 0; // This holds the index of the student currently displayed.
 var intervalMark; // This will serve as the container for the interval.
 var elapsedSec = 0; // Counter for the interval timer.
+var viewType = 'default'; // Flag for type of view
 
 /// == Function Declarations == ///
 function addIndieButton(index, memberName){
@@ -15,11 +16,21 @@ function addIndieButton(index, memberName){
 function displayPi(fadeEffect){
   var piOnDisplay = piCohort[currentPi];
   var piNum = currentPi+1;
-  var changeInfo = function(){
-    $('#titleRow').html('<h3>'+'Pi Member #'+(piNum)+' of '+numPies+'</h3>');
-    $('#nameRow').html('<h3>'+piOnDisplay.first_name+' '+piOnDisplay.last_name+'</h3>');
-    $('#infoRow').html('<h4>'+piOnDisplay.info+'</h4>');
-  };
+  var changeInfo;
+
+  if (viewType == 'default'){
+    changeInfo = function(){
+      $('#titleRow').html('<h3>'+'Pi Member #'+(piNum)+' of '+numPies+'</h3>');
+      $('#nameRow').html('<h3>'+piOnDisplay.first_name+' '+piOnDisplay.last_name+'</h3>');
+      $('#infoRow').html('<h4>'+piOnDisplay.info+'</h4>');
+    };
+  } else {
+    changeInfo = function(){
+      $('#titleRow').html('<h3>'+'Pi Member #'+(piNum)+' of '+numPies+'</h3>');
+      $('#nameRow').html('<h3>'+piOnDisplay.first_name+' "'+piOnDisplay.info+'" '+piOnDisplay.last_name+'</h3>');
+      $('#infoRow').html('');
+    };
+  }
 
   if (fadeEffect){
     $('#memberInfo').fadeOut('slow',changeInfo).fadeIn();
@@ -95,6 +106,19 @@ function changeTimer(){
   }
 }
 
+function changeView(){
+  console.log('in changeView with:', viewType);
+  if (viewType == 'default') {
+    viewType = 'nickname';
+    $('#viewText').html('Default');
+  } else {
+    viewType = 'default';
+    $('#viewText').html('Nickname');
+  }
+
+  displayPi(true);
+}
+
 /// == JavaScript == ///
 $(document).ready(function(){
   console.log('Document ready!');
@@ -137,4 +161,6 @@ $(document).ready(function(){
   $('#randomButton').click(displayRandom);
 
   $('#timerButton').click(changeTimer);
+
+  $('#viewButton').click(changeView);
 }); // end document ready
